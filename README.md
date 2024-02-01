@@ -22,7 +22,7 @@ Using this toolkit, you can:
 <a id="sec-env"></a>
 ## 1. Intel® oneAPI AI Analytics Toolkit Environment Packages Information
 
-You can find more detailed information on using the Intel® oneAPI AI Analytics Toolkit at <a href="software.intel.com/oneapi/ai-kit">software.intel.com/oneapi/ai-kit</a>. 
+You can find more detailed information on using the Intel® oneAPI AI Analytics Toolkit at <a href="https://www.intel.com/content/www/us/en/developer/tools/oneapi/ai-analytics-toolkit.html">AI Tools</a>. 
 
 On RedHat OpenShift Data Science, we have provided some pre-installed AI Kit environments based on different workload needs:
 
