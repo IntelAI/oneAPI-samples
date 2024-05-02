@@ -23,18 +23,19 @@ Before we start running the notebook we need to make sure a few things are in pl
 
     - Scroll down to `spec.components.codeflare` and edit the value for the key `managementState` to `Managed`. Do the same for `spec.components.ray`. Now save the YAML and wait for the KubeRay and CodeFlare operators to be initialized. You should be able to see pods for codeflare and kuberay running in the `redhat-ods-applications` project.
 
-* Build and push the Ray-IPEX image by running the following commands.
+* Build and push the Ray-IPEX image by running the following commands. Please login to your OCP cluster before running these commands.
 
     ```bash
     export LOCAL_REGISTRY=$(oc get route default-route -n openshift-image-registry --template='{{ .spec.host }}')
     git clone https://github.com/IntelAI/oneAPI-samples
     cd oneAPI-samples/intel-extension-for-pytorch/Distributed/
     docker build -t $LOCAL_REGISTRY/ray-ipex/ray-ipex:latest --build-arg BASE_IMAGE=quay.io/opendatahub/workbench-images:jupyter-intel-pytorch-ubi9-python-3.9-20240422 .
+    oc new-project ray-ipex
     docker push $LOCAL_REGISTRY/ray-ipex/ray-ipex:latest
     ```
 
 * Collect necessary information to login to the cluster from the notebook by using the following commands.
-  Note down the value of the token and API server URL. Please login to your OCP cluster before running these commands.
+  Note down the value of the token and API server URL.
     
     - Find the Token for authentication.
 
