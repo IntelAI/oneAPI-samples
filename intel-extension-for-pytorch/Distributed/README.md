@@ -11,7 +11,7 @@ Before we start running the notebook we need to make sure a few things are in pl
         ![Step-1](./assets/OperatorHub.png)
     - Now in the search box type "OpenShift AI" and that'll show you the "RedHat OpenShift AI" tile for the operator. Refer to the screenshot below.
         ![Step-2](./assets/RHODS-operator.png)
-    - Click on the tile and click on the Install button. This will install all the necessary resources and the operator.
+    - Select the tile and click on the Install button. This will install all the necessary resources and the operator.
 
 * Enable CodeFlare and KubeRay for OpenShift AI.
 
@@ -19,7 +19,7 @@ Before we start running the notebook we need to make sure a few things are in pl
         ![Step-3](./assets/Installed_operators.png)
     - Click on the "RedHat OpenShift AI" operator and go to the tab named "Data Science Cluster"(DSC). Refer to the screenshot below.
         ![Step-4](./assets/DSC.png)
-    - Click on `default-dsc` from the DSC page (refer to above image), which will take you the resource page. Now click on the "YAML" tab to edit the definition of the resource.
+    - Click on `default-dsc` from the DSC page (refer to above image), which will take you to the resource page. Now click on the "YAML" tab to edit the definition of the resource.
 
     - Scroll down to `spec.components.codeflare` and edit the value for the key `managementState` to `Managed`. Do the same for `spec.components.ray`. Now save the YAML and wait for the KubeRay and CodeFlare operators to be initialized. You should be able to see pods for codeflare and kuberay running in the `redhat-ods-applications` project.
 
